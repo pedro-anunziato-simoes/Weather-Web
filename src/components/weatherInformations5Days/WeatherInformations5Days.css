@@ -1,0 +1,42 @@
+.weather-container{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    h3{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+}
+
+.weather-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 5fr));
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.weather-item{
+    text-align: center;
+    background-color:rgba(152, 179, 255, 0.5) ;
+    border-radius: 10px;
+    padding: 10px;
+
+    p{
+        text-transform: capitalize;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 420px){
+    .weather-list{
+        flex-direction: column;
+        gap: 20px;
+    }   
+}
+
+@media (max-width: 770px){
+    .weather-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    } 
+}
